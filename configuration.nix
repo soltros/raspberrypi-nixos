@@ -2,6 +2,10 @@
 {
   imports = [
     ./repart.nix
+    ./ssh-server.nix
+    ./tailscale-support.nix
+    ./docker-support.nix
+    ./user-account.nix
   ];
   boot.kernelPackages = lib.mkForce pkgs.linuxPackages_latest;
   environment.systemPackages = with pkgs; [ vim git ];
